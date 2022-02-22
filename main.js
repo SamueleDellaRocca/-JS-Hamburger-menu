@@ -1,13 +1,20 @@
-// ELEMENTI
-const menuAperto = document.getElementsByClassName('hamburger_menu')
-const btnMenu = document.getElementsByClassName('icona');
-// menuAperto.className = "open";
+let bottone = document.querySelector('.header-right > a');
+let menuAperto = document.querySelector('.hamburger-menu');
 
 
+bottone.addEventListener("click", myFunction);
 
-btnMenu.addEventListener('click', myFunction);
 
 function myFunction() {
-    menuAperto.classList.toggle('open');
+    menuAperto.style.display = "block";
 }
 
+
+let bottoneChiusura = document.querySelector('.close')
+
+
+bottoneChiusura.addEventListener("click", funzioneChiusura);
+
+function funzioneChiusura() {
+    menuAperto.style.display = "none";
+}
